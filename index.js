@@ -1,6 +1,8 @@
 // Create an AudioContext
 let audioContext = new AudioContext();
 
+console.log(audioContext)
+
 // Create a (first-order Ambisonic) Resonance Audio scene and pass it
 // the AudioContext.
 let resonanceAudioScene = new ResonanceAudio(audioContext);
