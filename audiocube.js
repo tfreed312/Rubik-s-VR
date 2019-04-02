@@ -2,13 +2,11 @@
 let audioContext = null
 let source1 = null
 let audioElement = null
-let audioSrc = 'https://storage.googleapis.com/gtclass/static/bell-C2.mpe'
+let audioSrc = 'https://uce1d23add5d74ccda10564670b1.dl.dropboxusercontent.com/cd/0/get/AeMCeZqHuNl1Ep-lC57HrCYf3x0TxtmFOyjpRV7tuveqv0vi8CxFSkwZOSGI2KTb66eID3eiqAK5TMltnIeiE3mQAfPnZ8xRysU7N3EpmGu0dOB6GPmcTctXQMudJu4kvAw/file?_download_id=45908341638739890403925954449139159039946410108433459320963139321&_notify_domain=www.dropbox.com&dl=1'
 
 function myFunction() {
   if (audioContext == null) {
     let audioContext = new AudioContext();
-
-    console.log("Inside function " + audioContext)
 
     // Create a (first-order Ambisonic) Resonance Audio scene and pass it
     // the AudioContext.
@@ -53,8 +51,6 @@ function myFunction() {
 
     // audioElement.src = './bell-C2.mp3';
     audioElement.src = audioSrc
-
-    console.log(audioElement.src)
 
     // Generate a MediaElementSource from the AudioElement.
     let audioElementSource = audioContext.createMediaElementSource(audioElement);
