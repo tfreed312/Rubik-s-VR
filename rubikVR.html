@@ -58,7 +58,7 @@
 
   // Load an audio file into the AudioElement.
   audioElement.crossOrigin = "anonymous";
-  audioElement.src = './bell-C2.mp3';
+  audioElement.src = './rubikSounds/bell-C2.mp3';
   
 
 
@@ -82,6 +82,8 @@
 
 
   function myFunction() {
+
+  audioElement.play();
 
   // Make array to contain source coordinates.
   var cellXpos = [-6, 0, 6, -6, 0, 6, -6, 0, 6];
@@ -123,7 +125,12 @@
         if (currentCell > 2) {
           currentCell -= 3;
           source1.setPosition(cellXpos[currentCell], cellYpos[currentCell], cellZpos[currentCell]);
-          audioElement.src = './bell-C2.mp3';
+          audioElement.src = './rubikSounds/white.mp3';
+          audioElement.play();
+        } else {
+          currentCell += 6;
+          source1.setPosition(cellXpos[currentCell], cellYpos[currentCell], cellZpos[currentCell]);
+          audioElement.src = './rubikSounds/blue.mp3';
           audioElement.play();
         }
       }
@@ -133,7 +140,12 @@
         if (currentCell < 6) {
           currentCell += 3;
           source1.setPosition(cellXpos[currentCell], cellYpos[currentCell], cellZpos[currentCell]);
-          audioElement.src = './bell-C2.mp3';
+          audioElement.src = './rubikSounds/bell-C2.mp3';
+          audioElement.play();
+        } else {
+          currentCell -= 6;
+          source1.setPosition(cellXpos[currentCell], cellYpos[currentCell], cellZpos[currentCell]);
+          audioElement.src = './rubikSounds/bell-C2.mp3';
           audioElement.play();
         }
       }
@@ -144,7 +156,12 @@
         if (currentCell !== 0 && currentCell !== 3 && currentCell !== 6) {
           currentCell -= 1;
           source1.setPosition(cellXpos[currentCell], cellYpos[currentCell], cellZpos[currentCell]);
-          audioElement.src = './bell-C2.mp3';
+          audioElement.src = './rubikSounds/bell-C2.mp3';
+          audioElement.play();
+        } else {
+          currentCell += 2;
+          source1.setPosition(cellXpos[currentCell], cellYpos[currentCell], cellZpos[currentCell]);
+          audioElement.src = './rubikSounds/bell-C2.mp3';
           audioElement.play();
         }
       }
@@ -154,7 +171,12 @@
         if (currentCell !== 2 && currentCell !== 5 && currentCell !== 8) {
           currentCell += 1;
           source1.setPosition(cellXpos[currentCell], cellYpos[currentCell], cellZpos[currentCell]);
-          audioElement.src = './bell-C2.mp3';
+          audioElement.src = './rubikSounds/bell-C2.mp3';
+          audioElement.play();
+        } else {
+          currentCell -= 2;
+          source1.setPosition(cellXpos[currentCell], cellYpos[currentCell], cellZpos[currentCell]);
+          audioElement.src = './rubikSounds/bell-C2.mp3';
           audioElement.play();
         }
       }
